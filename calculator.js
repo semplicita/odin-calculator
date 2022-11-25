@@ -23,6 +23,9 @@ function operate(operator, operand1, operand2) {
         case 'multiply':
             return multiply(operand1, operand2)
         case 'divide':
+            if (operand2 === 0) {
+                return 'ERROR'
+            }
             return divide(operand1, operand2)
     }
 }
@@ -53,12 +56,17 @@ const operators = document.getElementById('operators')
 
 operators .addEventListener('click', (event) => {
     if (operator !== '') {
-        operand2 = parseInt(document.querySelector('#display').textContent)
+        operand2 = parseFloat(document.querySelector('#display').textContent)
         let result = operate(operator, operand1, operand2)
         updateDisplay(result)
+        if (result === 'ERROR') {
+            operand1 = ''
+            operator = ''
+            operand2 = ''
+        }
     }
     operator = event.target.id
-    operand1 = parseInt(document.querySelector('#display').textContent)
+    operand1 = parseFloat(document.querySelector('#display').textContent)
     clearDisplay = true
 })
 
@@ -74,7 +82,7 @@ clearBtn.addEventListener('click', () => {
 const equalsBtn = document.getElementById('equals')
 
 equalsBtn.addEventListener('click', () => {
-    operand2 = parseInt(document.querySelector('#display').textContent)
+    operand2 = parseFloat(document.querySelector('#display').textContent)
     let result = operate(operator, operand1, operand2)
     updateDisplay(result)
     clearDisplay = true
