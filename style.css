@@ -1,0 +1,40 @@
+#container {
+    display: flex;
+}
+
+button {
+    background-color:whitesmoke;
+    border-color:gray;
+    border-width: 1px;
+    border-radius: 15%;
+}
+
+#right-container {
+    display: flex;
+    flex-direction: column;
+}
+#digits {
+    width: 90px;
+    display:flex;
+    flex-wrap: wrap;
+    gap: 2px;
+}
+
+#display {
+    padding: 10px;
+}
+
+#operators button,
+#equals {
+    background-color:lightgreen
+}
+
+#operators {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+#clear {
+    color: red;
+}

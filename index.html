@@ -5,31 +5,34 @@
     <meta charset="UTF-8">
     <title>Calculator</title>
     <script src="calculator.js" defer></script>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
+    <div id="display"></div>
     <div id="container">
-        <div id="display"></div>
         <div id="digits">
-            <button id="1">0</button>
-            <button id="2">1</button>
-            <button id="3">2</button>
-            <button id="3">3</button>
-            <button id="4">4</button>
-            <button id="5">5</button>
-            <button id="6">6</button>
             <button id="7">7</button>
             <button id="8">8</button>
             <button id="9">9</button>
+            <button id="4">4</button>
+            <button id="5">5</button>
+            <button id="6">6</button>
+            <button id="1">1</button>
+            <button id="2">2</button>
+            <button id="3">3</button>
+            <button id="0">0</button>
         </div>
-        <div id="operators">
-            <button id="add">+</button>
-            <button id="subtract">-</button>
-            <button id="multiply">x</button>
-            <button id="divide">/</button>
+        <div id="right-container">
+            <button id="clear">C</button>
+            <div id="operators">
+                <button id="add">+</button>
+                <button id="subtract">-</button>
+                <button id="multiply">x</button>
+                <button id="divide">/</button>
+            </div>
+            <button id="equals">=</button>
         </div>
-        <button id="equals">=</button>
-        <button id="clear">C</button>
     </div>
 </body>
 
