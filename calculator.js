@@ -77,4 +77,7 @@ equalsBtn.addEventListener('click', () => {
     operand2 = parseInt(document.querySelector('#display').textContent)
     let result = operate(operator, operand1, operand2)
     updateDisplay(result)
+    clearDisplay = true
+    operand1 = ''
+    operator = ''
 })
