@@ -26,3 +26,21 @@ function operate(operator, operand1, operand2) {
             return divide(operand1, operand2)
     }
 }
+
+function updateDisplay(newValue) {
+    const display = document.querySelector('#display')
+    display.textContent = newValue
+}
+
+const digits = document.getElementById('digits')
+
+digits.addEventListener('click', (event) => {
+    const display = document.querySelector('#display')
+    updateDisplay(display.textContent += event.target.textContent)
+})
+
+const clearBtn = document.getElementById('clear')
+
+clearBtn.addEventListener('click', () => {
+    updateDisplay('')
+})
