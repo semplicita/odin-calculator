@@ -44,6 +44,9 @@ digits.addEventListener('click', (event) => {
         updateDisplay('')
     }
     const display = document.querySelector('#display')
+    if (display.textContent === '0') {
+        display.textContent = ''
+    }
     updateDisplay(display.textContent += event.target.textContent)
     clearDisplay = false
 })
@@ -76,7 +79,7 @@ clearBtn.addEventListener('click', () => {
     operator = ''
     operand1 = ''
     operand2 = ''
-    updateDisplay('')
+    updateDisplay('0')
 })
 
 const equalsBtn = document.getElementById('equals')
